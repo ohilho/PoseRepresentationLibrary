@@ -146,7 +146,7 @@ void log_se3(const Eigen::MatrixXf &SE3, Eigen::VectorXf &se3)
 
     // make so3_hat
     Eigen::MatrixXf so3_hat;
-    hat_so3(SE3.block(0, 0, 3, 3), so3_hat);
+    hat_so3(so3, so3_hat);
 
     //make V_inv
     Eigen::MatrixXf V_inv = Eigen::MatrixXf::Identity(3, 3) -
